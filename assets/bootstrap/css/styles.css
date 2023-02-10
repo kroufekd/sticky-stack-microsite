@@ -1,69 +1,117 @@
-.nav-logo{
+.nav-logo {
     width: 200px;
 }
+
 html {
     scroll-behavior: smooth;
-  }
-body{
-font-family: 'Rubik', sans-serif;
 }
-.header{
+
+body {
+    font-family: 'Rubik', sans-serif;
+}
+
+.header {
     min-height: 92vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.header-text{
+
+.header-text {
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
-    background-image: linear-gradient(180deg,transparent 75%,#F03233 0);
+    background-image: linear-gradient(180deg, transparent 75%, var(--bs-primary) 0);
     background-size: 0 100%;
     background-repeat: no-repeat;
     -webkit-transition: background-size .4s ease;
     transition: background-size .4s ease;
-    font-size: 5rem 
+    font-size: 5rem
 }
-.border-red{
+
+.border-red {
     border: 2px solid #F03233;
 }
 
 @keyframes typing {
-    from { width: 100%;  }
-    to { width:0; }
+    from {
+        width: 100%;
+    }
+
+    to {
+        width: 0;
+    }
 }
 
 @keyframes typingReverse {
-    from { width: 0;  }
-    to { width: 100%; }
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
 }
 
 @keyframes blink-cursor {
-    from, to { border-color: transparent; }
-    50% { border-color: #999; }
+
+    from,
+    to {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: #999;
+    }
 }
-@keyframes blink-cursor-disappear  {
-    from, to { border-color: transparent; }
-    50% { border-color: #999; }
-    100% { border-left: 0px; }
+
+@keyframes blink-cursor-disappear {
+
+    from,
+    to {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: #999;
+    }
+
+    100% {
+        border-left: 0px;
+    }
 }
-        
+
 @keyframes cursor-wait {
-    from, to { border-color: #999; }
-    50% { border-color: transparent; }
+
+    from,
+    to {
+        border-color: #999;
+    }
+
+    50% {
+        border-color: transparent;
+    }
 }
 
 @keyframes hide-me {
-    100% { visibility:hidden; height:0; width:0; }
+    100% {
+        visibility: hidden;
+        height: 0;
+        width: 0;
+    }
 }
 
 @keyframes show-me {
-    from,to { visibility:visible; height:auto; width:auto; }
+
+    from,
+    to {
+        visibility: visible;
+        height: auto;
+        width: auto;
+    }
 }
 
-.typing-words { 
-
-}
+.typing-words {}
 
 .typing-words .word {
     position: relative;
@@ -78,7 +126,7 @@ font-family: 'Rubik', sans-serif;
 .typing-words .word:after {
     content: attr(text);
     color: transparent;
-    background: #27262E; 
+    background: #27262E;
     position: absolute;
     top: 0;
     right: 0;
@@ -115,3 +163,174 @@ font-family: 'Rubik', sans-serif;
     display: none
 } */
 
+.value-slider {
+    text-align: center;
+    color: #999;
+    font-weight: 400;
+    float: right;
+}
+
+.range {
+    width: 100%;
+    height: 15px;
+    -webkit-appearance: none;
+    background: #111;
+    outline: none;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 1);
+
+}
+.range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    z-index: 9999;
+    width: 30px;
+    height: 30px;
+    /* border-radius: 50%; */
+    background: #733131;
+    cursor: pointer;
+    border: 2px solid #333;
+    box-shadow: -407px 0 0 400px var(--bs-primary);
+}
+.calcResultWrap{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background: var(--bs-primary);
+    border-radius: 4px;
+    justify-content: center;
+    align-items: center;   
+}
+.calcResultText{
+    color: #333;
+    font-size: 5em;
+}
+.calcResultSub{
+    font-size: 0.7em;
+}
+#calculator_country{
+    background-color: var(--bs-body-bg);
+    border-color: #111;
+    color: white;
+}
+.calcHeader{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.calcHeader h2 {
+    margin: 0 !important;
+}
+
+#debt-amount-slider {
+    display: flex;
+    flex-direction: row;
+    align-content: stretch;
+    position: relative;
+    width: 100%;
+    height: 50px;
+    user-select: none;
+}
+#debt-amount-slider::before {
+    content: " ";
+    position: absolute;
+    height: 2px;
+    width: 65%;
+    /* width: calc(100% * (4 / 5)); */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #000;
+}
+#debt-amount-slider input, form #debt-amount-slider label {
+    box-sizing: border-box;
+    flex: 1;
+    user-select: none;
+    cursor: pointer;
+}
+#debt-amount-slider label {
+    display: inline-block;
+    position: relative;
+    width: 33%;
+    height: 100%;
+    user-select: none;
+}
+#debt-amount-slider label::before {
+    content: attr(data-debt-amount);
+    position: absolute;
+    left: 50%;
+    padding-top: 10px;
+    transform: translate(-50%, 45px);
+    font-size: 14px;
+    letter-spacing: 0.4px;
+    font-weight: 400;
+    white-space: nowrap;
+    opacity: 0.85;
+    transition: all 0.15s ease-in-out;
+}
+#debt-amount-slider label::after {
+    content: " ";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 30px;
+    border: 2px solid #000;
+    background: var(--bs-body-bg);
+    border-radius: 50%;
+    pointer-events: none;
+    user-select: none;
+    z-index: 1;
+    cursor: pointer;
+    transition: all 0.15s ease-in-out;
+}
+#debt-amount-slider label:hover::after {
+    transform: translate(-50%, -50%) scale(1.25);
+}
+#debt-amount-slider input {
+    display: none;
+}
+#debt-amount-slider input:checked + label::before {
+    font-weight: 800;
+    opacity: 1;
+    color: var(--bs-primary);
+}
+#debt-amount-slider input:checked + label::after {
+    border-width: 4px;
+    transform: translate(-50%, -50%) scale(0.75);
+}
+#debt-amount-slider input:checked ~ #debt-amount-pos {
+    opacity: 1;
+}
+#debt-amount-slider input:checked:nth-child(1) ~ #debt-amount-pos {
+    left: 16.5%;
+}
+#debt-amount-slider input:checked:nth-child(3) ~ #debt-amount-pos {
+    left: 49.5%;
+}
+#debt-amount-slider input:checked:nth-child(5) ~ #debt-amount-pos {
+    left: 82.5%;
+}
+#debt-amount-slider #debt-amount-pos {
+    display: block;
+    position: absolute;
+    top: 50%;
+    width: 12px;
+    height: 12px;
+    background: #000;
+    border-radius: 50%;
+    transition: all 0.15s ease-in-out;
+    transform: translate(-50%, -50%);
+    border: 2px solid var(--bs-primary);
+    opacity: 0;
+    z-index: 2;
+}
+form:valid #debt-amount-slider input + label::before {
+    transform: translate(-50%, 45px) scale(0.9);
+    transition: all 0.15s linear;
+}
+form:valid #debt-amount-slider input:checked + label::before {
+    transform: translate(-50%, 45px) scale(1.1);
+    transition: all 0.15s linear;
+}

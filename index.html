@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Sticky Stack</title>
+    <link rel="icon" href="assets/img/px_logo.png" type="image/icon type">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/bootstrap/css/styles.css">
     <link rel="stylesheet"
@@ -37,8 +38,8 @@
             <div class="row">
                 <div class="col-md-8 col-xl-6 text-center text-md-start mx-auto">
                     <div class="text-center">
-                        <p class="fw-bold text-success mb-2">Monetize your website!</p>
-                        <h1 class="fw-bold header-text">The future is</h1>
+                        <p class="fw-bold text-success mb-2">Maximaize your profits!</p>
+                        <h1 class="fw-bold header-text">The future is in</h1>
                         <h1 class="fw-bold header-text end-word"><span class="typing-words">
                                 <span class="word" text="Advertisment">Advertisment</span><span class="word"
                                     text="High Revenue">High Revenue</span><span class="word last-word-text"
@@ -63,14 +64,15 @@
         </div>
     </header>
     <section class="py-5" id="calc">
-        <div class="container bg-dark py-5 py-5 p-lg-5">
+        <div class="container bg-dark py-3 mb-1">
             <div class="row">
-                <div class="col-md-8 col-xl-6 text-center mx-auto">
-                    <p class="fw-bold text-success mb-2"></p>
-                    <h2 class="fw-bold">Calculate your estimate revenue</h2>
+                <div class="col-md-8 col-xl-6 text-center mx-auto calcHeader">
+                    <h2 class="fw-bold mb-4">Calculate your estimate revenue</h2>
                 </div>
             </div>
-            <div class="row">
+        </div>
+        <div class="container bg-dark py-5 py-5 p-lg-5">
+            <div class="row pb-5">
                 <div class="col-md-6">
                     <div class="form-group">
                         <h3 class="fw-bold card-title py-3"><span class="text-primary">1. </span>Select website location
@@ -328,17 +330,55 @@
                         </select>
 
                     </div>
-                    <hr class="border-red">
-
-                    <h3 class="fw-bold card-title py-3"><span class="text-primary">2. </span>Set the metrics
-                    </h3>
-                    
-                    <div class="form-group">
-                        <h4>Monthly pageviews</h4>
-                        <input id="range2" name="range2" type="range" min="0" max="300" value="150">
+                    <hr class="border-red">                                            
+                </div>
+                <div class="col-md-6">
+                    <div class="calcResultWrap">
+                        <span class="calcResultText">
+                            50$/<span class="calcResultSub">month</span>
+                        </span>
                     </div>
                 </div>
-                <hr class="border-red">
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h3 class="fw-bold card-title py-3"><span class="text-primary">2. </span>Set the metrics
+                    </h3>
+                </div>
+            </div>
+            <div class="row pb-5">
+                <div class="col-md-6">
+                    <div class="form-group mb-3">
+                        <h4>Monthly pageviews <span class="value-slider" id="pageViewsSliderValue">0</span></h4>
+                        <Input class="range" type="range" value="0" min="0" max="100" onChange="rangeSlide(this.value)" onmousemove="rangeSlide(this.value)"></Input>
+                    </div>
+                    <hr class="border-red">
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group mb-3">
+                        <h4>Mobile visitors<span class="value-slider" id="mobileSliderValue">0%</span></h4>
+                        <Input class="range" type="range" value="0" min="0" max="100" onChange="rangeSlide(this.value, '%')" onmousemove="rangeSlide(this.value, '%')"></Input>
+                    </div>
+                    <hr class="border-red">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h3 class="fw-bold card-title py-3"><span class="text-primary">3. </span>Choose Ad quantity and frequency</h3>                    
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 intenzitySlider">
+                    <div id="debt-amount-slider">
+                        <input type="radio" name="debt-amount" id="1" value="1" required>
+                        <label for="1" data-debt-amount="Low"></label>
+                        <input type="radio" name="debt-amount" id="2" value="2" required>
+                        <label for="2" data-debt-amount="Mid"></label>
+                        <input type="radio" name="debt-amount" id="3" value="3" required>
+                        <label for="3" data-debt-amount="High"></label>
+                        <div id="debt-amount-pos"></div>
+                    </div>
+                </div>
             </div>
         </div>
 
