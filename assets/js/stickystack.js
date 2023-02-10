@@ -8,6 +8,7 @@ setTimeout(() => {
 }, 7700);
 
 function rangeSlide(value, char) {
+    value = Math.round(Math.pow(value, 3.22));
     if(char == '%'){
         document.getElementById('mobileSliderValue').innerHTML = value + "%";
     }else{
