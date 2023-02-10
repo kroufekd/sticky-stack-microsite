@@ -1,0 +1,117 @@
+.nav-logo{
+    width: 200px;
+}
+html {
+    scroll-behavior: smooth;
+  }
+body{
+font-family: 'Rubik', sans-serif;
+}
+.header{
+    min-height: 92vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header-text{
+    -webkit-transition: all .35s;
+    -moz-transition: all .35s;
+    transition: all .35s;
+    background-image: linear-gradient(180deg,transparent 75%,#F03233 0);
+    background-size: 0 100%;
+    background-repeat: no-repeat;
+    -webkit-transition: background-size .4s ease;
+    transition: background-size .4s ease;
+    font-size: 5rem 
+}
+.border-red{
+    border: 2px solid #F03233;
+}
+
+@keyframes typing {
+    from { width: 100%;  }
+    to { width:0; }
+}
+
+@keyframes typingReverse {
+    from { width: 0;  }
+    to { width: 100%; }
+}
+
+@keyframes blink-cursor {
+    from, to { border-color: transparent; }
+    50% { border-color: #999; }
+}
+@keyframes blink-cursor-disappear  {
+    from, to { border-color: transparent; }
+    50% { border-color: #999; }
+    100% { border-left: 0px; }
+}
+        
+@keyframes cursor-wait {
+    from, to { border-color: #999; }
+    50% { border-color: transparent; }
+}
+
+@keyframes hide-me {
+    100% { visibility:hidden; height:0; width:0; }
+}
+
+@keyframes show-me {
+    from,to { visibility:visible; height:auto; width:auto; }
+}
+
+.typing-words { 
+
+}
+
+.typing-words .word {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: middle;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+
+.typing-words .word:after {
+    content: attr(text);
+    color: transparent;
+    background: #27262E; 
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    z-index: 1;
+    border-left: 3px solid transparent;
+}
+
+.typing-words .word:nth-child(1) {
+    animation: 3s show-me 0s;
+}
+
+.typing-words .word:nth-child(1):after {
+    animation: 1s typing steps(6), typingReverse 1s steps(6) 1s forwards, 0.6s blink-cursor step-end infinite, 0.6s cursor-wait step-end 1 1s;
+}
+
+.typing-words .word:nth-child(2) {
+    animation: 3s show-me 3s;
+}
+
+.typing-words .word:nth-child(2):after {
+    animation: 1s typing 3s steps(5), typingReverse 1s steps(5) 4s forwards, 0.6s blink-cursor step-end infinite, 0.6s cursor-wait step-end 1 5s;
+}
+
+.typing-words .word:nth-child(3) {
+    animation: 2s show-me 6s forwards;
+}
+
+.typing-words .word:nth-child(3):after {
+    animation: 1s typing 6s steps(6) forwards, 0.6s blink-cursor-disappear 3s step-end 6;
+}
+
+/* .typing-words .word:nth-child(3):after{
+    display: none
+} */
+
