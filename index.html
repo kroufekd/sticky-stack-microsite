@@ -5,21 +5,19 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Sticky Stack</title>
+    <link rel="icon" href="assets/img/px_logo.png" type="image/icon type">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/bootstrap/css/styles.css">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Inter:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;display=swap">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600&display=swap" rel="stylesheet">
-
 </head>
 
 <body>
     <nav class="navbar navbar-dark navbar-expand-md sticky-top py-3" id="mainNav">
-        <div class="container"><a class="navbar-brand d-flex align-items-center" href="/"><span><img class="nav-logo"
+        <div class="container"><a class="navbar-brand d-flex align-items-center" href="https://www.performax.cz" target="_blank"><span><img class="nav-logo"
                         src="https://cdn.performax.cz/px2-data/7/269c2d3.png" alt=""></span></a><button
                 data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span
                     class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
@@ -33,12 +31,12 @@
         </div>
     </nav>
     <header class="bg-dark header">
-        <div class="container" style="margin-bottom: 14vh">
-            <div class="row">
+        <div class="container">
+            <div class="row firstRow">
                 <div class="col-md-8 col-xl-6 text-center text-md-start mx-auto">
                     <div class="text-center">
-                        <p class="fw-bold text-success mb-2">Monetize your website!</p>
-                        <h1 class="fw-bold header-text">The future is</h1>
+                        <p class="fw-bold text-success mb-2">Maximaize your profits!</p>
+                        <h1 class="fw-bold header-text">The future is in</h1>
                         <h1 class="fw-bold header-text end-word"><span class="typing-words">
                                 <span class="word" text="Advertisment">Advertisment</span><span class="word"
                                     text="High Revenue">High Revenue</span><span class="word last-word-text"
@@ -46,38 +44,40 @@
                             </span></h1>
                     </div>
                 </div>
-                <!-- <div class="col-12 col-lg-10 mx-auto">
+            </div>
+            <!-- <div class="row">
+                 <div class="col-12 col-lg-10 mx-auto">
                     <div class="position-relative" style="display: flex;flex-wrap: wrap;justify-content: flex-end;">
                         <div style="position: relative;flex: 0 0 45%;transform: translate3d(-15%, 35%, 0);"><img
-                                class="img-fluid" data-bss-parallax="" data-bss-parallax-speed="0.8"
+                                class="img-fluid" data-bss-parallax="" data-bss-parallax-speed="2.5"
                                 src="assets/img/products/3.jpg"></div>
                         <div style="position: relative;flex: 0 0 45%;transform: translate3d(-5%, 20%, 0);"><img
-                                class="img-fluid" data-bss-parallax="" data-bss-parallax-speed="0.4"
+                                class="img-fluid" data-bss-parallax="" data-bss-parallax-speed="2"
                                 src="assets/img/products/2.jpg"></div>
                         <div style="position: relative;flex: 0 0 60%;transform: translate3d(0, 0%, 0);"><img
-                                class="img-fluid" data-bss-parallax="" data-bss-parallax-speed="0.25"
+                                class="img-fluid" data-bss-parallax="" data-bss-parallax-speed="2.1"
                                 src="assets/img/products/1.jpg"></div>
                     </div>
-                </div> -->
-            </div>
+                </div> 
+            </div> -->
         </div>
     </header>
     <section class="py-5" id="calc">
-        <div class="container bg-dark py-5 py-5 p-lg-5">
+        <div class="container bg-dark py-3 mb-1">
             <div class="row">
-                <div class="col-md-8 col-xl-6 text-center mx-auto">
-                    <p class="fw-bold text-success mb-2"></p>
-                    <h2 class="fw-bold">Calculate your estimate revenue</h2>
+                <div class="col-md-8 col-xl-6 text-center mx-auto calcHeader">
+                    <h2 class="fw-bold mb-4">Calculate your estimate revenue</h2>
                 </div>
             </div>
-            <div class="row">
+        </div>
+        <div class="container bg-dark py-5 py-5 p-lg-5">
+            <div class="row pb-5">
                 <div class="col-md-6">
                     <div class="form-group">
                         <h3 class="fw-bold card-title py-3"><span class="text-primary">1. </span>Select website location
                         </h3>
                         <select id="calculator_country" name="calculator[country]" required="required"
                             class="form-control">
-                            <option value="" selected="selected">Start typing or choose from the list</option>
                             <option value="AF">Afghanistan</option>
                             <option value="AX">Åland Islands</option>
                             <option value="AL">Albania</option>
@@ -137,7 +137,7 @@
                             <option value="CU">Cuba</option>
                             <option value="CW">Curaçao</option>
                             <option value="CY">Cyprus</option>
-                            <option value="CZ">Czechia</option>
+                            <option value="CZ" selected="selected">Czechia</option>
                             <option value="DK">Denmark</option>
                             <option value="DJ">Djibouti</option>
                             <option value="DM">Dominica</option>
@@ -328,23 +328,61 @@
                         </select>
 
                     </div>
-                    <hr class="border-red">
-
-                    <h3 class="fw-bold card-title py-3"><span class="text-primary">2. </span>Set the metrics
-                    </h3>
-                    
-                    <div class="form-group">
-                        <h4>Monthly pageviews</h4>
-                        <input id="range2" name="range2" type="range" min="0" max="300" value="150">
+                    <hr class="border-red">                                            
+                </div>
+                <div class="col-md-6">
+                    <div class="calcResultWrap">
+                        <span class="calcResultText">
+                            50$/<span class="calcResultSub">month</span>
+                        </span>
                     </div>
                 </div>
-                <hr class="border-red">
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h3 class="fw-bold card-title py-3"><span class="text-primary">2. </span>Set the metrics
+                    </h3>
+                </div>
+            </div>
+            <div class="row pb-5">
+                <div class="col-md-6">
+                    <div class="form-group mb-3">
+                        <h4>Monthly pageviews <span class="value-slider" id="pageViewsSliderValue">0</span></h4>
+                        <Input class="range" type="range" value="0" min="0" max="100" onChange="rangeSlide(this.value)" onmousemove="rangeSlide(this.value)"></Input>
+                    </div>
+                    <hr class="border-red">
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group mb-3">
+                        <h4>Mobile visitors<span class="value-slider" id="mobileSliderValue">0%</span></h4>
+                        <Input class="range" type="range" value="0" min="0" max="100" onChange="rangeSlide(this.value, '%')" onmousemove="rangeSlide(this.value, '%')"></Input>
+                    </div>
+                    <hr class="border-red">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h3 class="fw-bold card-title py-3"><span class="text-primary">3. </span>Choose Ad quantity and frequency</h3>                    
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 intenzitySlider">
+                    <div id="debt-amount-slider">
+                        <input type="radio" name="debt-amount" id="1" value="1" required>
+                        <label for="1" data-debt-amount="Low"></label>
+                        <input type="radio" name="debt-amount" id="2" value="2" required checked>
+                        <label for="2" data-debt-amount="Mid"></label>
+                        <input type="radio" name="debt-amount" id="3" value="3" required>
+                        <label for="3" data-debt-amount="High"></label>
+                        <div id="debt-amount-pos"></div>
+                    </div>
+                </div>
             </div>
         </div>
 
         </div>
     </section>
-    <section class="py-5" id="calc">
+    <!-- <section class="py-5" id="calc">
         <div class="container bg-dark py-5">
             <div class="row">
                 <div class="col-md-8 col-xl-6 text-center mx-auto">
@@ -663,8 +701,8 @@
                 </div>
             </div>
         </div>
-    </section>
-    <section>
+    </section> -->
+    <!-- <section>
         <div class="container py-5">
             <div class="mx-auto" style="max-width: 900px;">
                 <div class="row row-cols-1 row-cols-md-2 d-flex justify-content-center">
@@ -700,7 +738,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <section class="py-5 mt-5">
         <div class="container py-5">
             <div class="row mb-5">
