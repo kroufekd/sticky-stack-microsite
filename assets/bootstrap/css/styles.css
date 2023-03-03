@@ -116,9 +116,6 @@ body {
   }
 }
 
-.typing-words {
-}
-
 .typing-words .word {
   position: relative;
   overflow: hidden;
@@ -179,8 +176,8 @@ body {
   float: right;
 }
 
-h3{
-    width: 100%
+h3 {
+  width: 100%;
 }
 
 .range {
@@ -232,6 +229,10 @@ h3{
 }
 .calcHeader h2 {
   margin: 0 !important;
+}
+
+#calc {
+  scroll-margin-top: 8vh;
 }
 
 #debt-amount-slider {
@@ -353,28 +354,126 @@ form:valid #debt-amount-slider input:checked + label::before {
   }
 }
 
-.h3-text{
-    text-align: justify;
+.h3-text {
+  text-align: justify;
 }
 
-.border-right{
-    border-right: 2px solid var(--bs-primary)
+.border-right {
+  border-right: 2px solid var(--bs-primary);
 }
 
-.h3-icon{
-    margin-left: 10px;
+.h3-icon {
+  margin-left: 10px;
 }
 
-.shadow-dark{
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px !important;
+.shadow-dark {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px !important;
 }
 
-.about-first{
-    margin-top: 3vh
+.about-first {
+  margin-top: 3vh;
 }
-.about-second{
+.about-second {
+}
+.about-third {
+  margin-top: 8vh;
+}
+/*
+#svg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 25vw;
+}
+.line {
+  stroke-dashoffset: 0;
+  box-shadow: 10px 10px 1px black;
+}
+.breakpoint {
+  transform: scale(0);
+  position: absolute;
+  -webkit-transform-origin: 50% 50%;
+}
+*/
+.active {
+  transform: scale(1);
+}
+.graph {
+  height: 40vh;
+  position: relative;
+}
+.graph-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.graph-text > * {
+  
+}
+.graph-container {
+  display: flex;
+  justify-content: center;
+}
+.graph-container .svg-container .grid-back {
+  fill: var(--bs-body-bg);
+}
+.graph-container .svg-container .grid-front {
+  fill: #676363;
+}
+.graph-container .svg-container .chart-line {
+  stroke-width: 5;
+  stroke-linecap: round;
+  stroke-dasharray: 2000;
+  stroke-dashoffset: 2000;
+}
+.graph-container .svg-container .chart-line.primary {
+  stroke: var(--bs-primary);
+  fill: rgba(36, 123, 160, 0);
+  animation: draw 3s linear forwards, fill 0.5s linear 1.5s forwards;
+}
+.graph-container .svg-container .chart-line.secondary {
+  stroke: rgb(85, 85, 85);
+  fill: rgba(0, 168, 150, 0);
+  animation: draw 3s linear forwards, fillSecondary 0.5s linear 1.5s forwards;
+}
+.graph-container .svg-container .overlay-border {
+  fill: none;
+  stroke-width: 5;
+  stroke: var(--bs-body-bg)
+}
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+ }
+}
+@keyframes fill {
+  to {
+    fill: rgba(116, 0, 0, 0.3);
+ }
+}
+@keyframes fillSecondary {
+  to {
+    fill: rgba(83, 83, 83, 0.3);
+ }
+}
 
+.graph-section{
+  height: 58vh !important;
 }
-.about-third{
-    margin-top: 8vh
+
+.calc-contaier{
+  opacity: 0;
+}
+.reveal{
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+
+.reveal.active{
+  transform: translateY(0);
+  opacity: 1;
 }
