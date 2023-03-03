@@ -7,6 +7,15 @@ setTimeout(() => {
   animated_text.style.backgroundSize = "100% 100%";
 }, 7700);
 
+document.querySelector(".anim-typewriter").addEventListener("animationend", () => {
+  console.log("Animation ended");
+  document.querySelector(".anim-typewriter").style.borderRightColor = "transparent";
+  setTimeout(() => {
+    document.querySelector(".end-word").classList.add("underline")
+  }, 1500);
+ 
+});
+
 function rangeSlide(value) {
   value = Math.round(Math.pow(value, 3.84));
   if (value > 47863008) {
