@@ -428,8 +428,8 @@ form:valid #debt-amount-slider input:checked + label::before {
 }
 
 .theme-container {
-  width: 70px;
-  height: 70px;
+  width: 55px;
+  height: 55px;
   border-radius: 50%;
   position: fixed;
   bottom: 20px;
@@ -450,7 +450,7 @@ form:valid #debt-amount-slider input:checked + label::before {
 }
 
 .shadow-light {
-  box-shadow: 7px 7px 15px -10px #bbcfda, -4px -4px 13px #ffffff,
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
 @keyframes change {
