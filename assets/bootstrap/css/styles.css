@@ -327,7 +327,7 @@ form:valid #debt-amount-slider input:checked + label::before {
 }
 
 .h3-text {
-  text-align: justify;
+  text-align: center;
 }
 
 .border-right {
