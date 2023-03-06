@@ -286,6 +286,9 @@ form:valid #debt-amount-slider input:checked + label::before {
   .calcResultText {
     font-size: 3em;
   }
+  .graph-section{
+    height: 90vh !important;
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -399,7 +402,7 @@ form:valid #debt-amount-slider input:checked + label::before {
 }
 
 .graph-section {
-  height: 58vh;
+  height: 75vh;
 }
 
 .calc-contaier {
