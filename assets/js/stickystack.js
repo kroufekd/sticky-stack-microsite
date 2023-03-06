@@ -3,17 +3,18 @@ var last_word_text = document.querySelector(".last-word-text");
 var intensityCheckboxes = document.getElementsByName("debt-amount");
 
 setTimeout(() => {
-  last_word_text.classList.add("hide-after");
   animated_text.style.backgroundSize = "100% 100%";
 }, 7700);
 
-document.querySelector(".anim-typewriter").addEventListener("animationend", () => {
-  console.log("Animation ended");
-  document.querySelector(".anim-typewriter").style.borderRightColor = "transparent";
-  setTimeout(() => {
-    document.querySelector(".end-word").classList.add("underline")
-  }, 1500);
-});
+document
+  .querySelector(".anim-typewriter")
+  .addEventListener("animationend", () => {
+    document.querySelector(".anim-typewriter").style.borderRightColor =
+      "transparent";
+    setTimeout(() => {
+      document.querySelector(".end-word").classList.add("underline");
+    }, 1500);
+  });
 
 var price = [0, -95, -30, -65, -150, -215, -150, -220, -300];
 
@@ -99,18 +100,20 @@ const wait = (forSecond) => {
 
 var graph_observer = new IntersectionObserver(
   function (entries) {
-    if (entries[0].isIntersecting === true)
-    addLineToSVG(line1Data, "primary");
+    if (entries[0].isIntersecting === true) addLineToSVG(line1Data, "primary");
   },
   { threshold: [0] }
 );
 
 graph_observer.observe(document.querySelector(".graph"));
 
-var calc_observer = new IntersectionObserver(function(entries) {
-	if(entries[0].isIntersecting === true)
-		console.log('Element is fully visible in screen');
-}, { threshold: [0] });
+var calc_observer = new IntersectionObserver(
+  function (entries) {
+    if (entries[0].isIntersecting === true)
+      console.log("Element is fully visible in screen");
+  },
+  { threshold: [0] }
+);
 
 calc_observer.observe(document.querySelector("#calc"));
 
@@ -131,3 +134,73 @@ function reveal() {
 }
 
 window.addEventListener("scroll", reveal);
+
+const link = document.querySelector("#sheet-type");
+
+const sun =
+  "https://www.uplooder.net/img/image/55/7aa9993fc291bc170abea048589896cf/sun.svg";
+const moon =
+  "https://www.uplooder.net/img/image/2/addf703a24a12d030968858e0879b11e/moon.svg";
+
+var navLogo = document.querySelector(".nav-logo");
+
+
+
+
+const root = document.querySelector(":root");
+const container = document.getElementsByClassName("theme-container")[0];
+const themeIcon = document.getElementById("theme-icon");
+
+container.addEventListener("click", setTheme);
+function setTheme() {
+  console.log("changing theme");
+  switch (localStorage.getItem("theme")) {
+    case "dark":
+      setLight(300);
+      localStorage.setItem("theme", "light");
+      break;
+    case "light":
+      setDark(300);
+      theme = "dark";
+      localStorage.setItem("theme", "dark");
+      break;
+  }
+}
+function setLight(delay) {
+  root.style.setProperty(
+    "--bs-dark",
+    "linear-gradient(318.32deg, #c3d1e4 0%, #dde7f3 55%, #d4e0ed 100%)"
+  );
+  container.classList.remove("shadow-dark-btn");
+  setTimeout(() => {
+    container.classList.add("shadow-light");
+    themeIcon.classList.remove("change");
+    link.href = "assets/bootstrap/css/light.css";
+    navLogo.src = "assets/img/px_logo_light.png";
+  }, delay);
+  themeIcon.classList.add("change");
+  themeIcon.src = sun;
+}
+
+function setDark(delay) {
+  root.style.setProperty("--bs-dark", "#212529");
+  container.classList.remove("shadow-light");
+  setTimeout(() => {
+    container.classList.add("shadow-dark-btn");
+    themeIcon.classList.remove("change");
+    navLogo.src = "assets/img/px_logo_dark.png";
+    link.href = "assets/bootstrap/css/dark.css";
+  }, delay);
+  themeIcon.classList.add("change");
+  themeIcon.src = moon;
+}
+
+if(localStorage.getItem("theme") == null){
+  localStorage.setItem("theme", "dark")
+}
+if(localStorage.getItem("theme") == "dark"){
+  setDark(0);
+}
+if(localStorage.getItem("theme") == "light"){
+  setLight(0);
+}

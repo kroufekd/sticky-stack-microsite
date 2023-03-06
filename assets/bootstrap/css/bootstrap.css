@@ -1,83 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Inter:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&display=swap);
-/*!
- * Bootstrap  v5.2.2 (https://getbootstrap.com/)
- * Copyright 2011-2022 The Bootstrap Authors
- * Copyright 2011-2022 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
- */
-:root {
-  --bs-blue: #3763f4;
-  --bs-indigo: #6610f2;
-  --bs-purple: #6f42c1;
-  --bs-pink: #dc3dcb;
-  --bs-red: #dc3545;
-  --bs-orange: #fd7e14;
-  --bs-yellow: #ffc107;
-  --bs-green: #19f5aa;
-  --bs-teal: #06a0b2;
-  --bs-cyan: #06a0b2;
-  --bs-black: #000;
-  --bs-white: #fff;
-  --bs-gray: #4e5d78;
-  --bs-gray-dark: #343a40;
-  --bs-gray-100: #f5f6f8;
-  --bs-gray-200: #e9ecef;
-  --bs-gray-300: #dee2e6;
-  --bs-gray-400: #ced4da;
-  --bs-gray-500: #adb5bd;
-  --bs-gray-600: #4e5d78;
-  --bs-gray-700: #495057;
-  --bs-gray-800: #343a40;
-  --bs-gray-900: #2d2d2d;
-  --bs-primary: #F03233;
-  --bs-secondary: #dc3dcb;
-  --bs-success: #19f5aa;
-  --bs-info: #06a0b2;
-  --bs-warning: #ffc107;
-  --bs-danger: #dc3545;
-  --bs-light: #f5f6f8;
-  --bs-dark: #27262e;
-  --bs-primary-rgb: 55, 99, 244;
-  --bs-secondary-rgb: 220, 61, 203;
-  --bs-success-rgb: 25, 245, 170;
-  --bs-info-rgb: 6, 160, 178;
-  --bs-warning-rgb: 255, 193, 7;
-  --bs-danger-rgb: 220, 53, 69;
-  --bs-light-rgb: 245, 246, 248;
-  --bs-dark-rgb: 39, 38, 46;
-  --bs-white-rgb: 255, 255, 255;
-  --bs-black-rgb: 0, 0, 0;
-  --bs-body-color-rgb: 255, 255, 255;
-  --bs-body-bg-rgb: 45, 44, 56;
-  --bs-font-sans-serif: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
-    "Liberation Mono", "Courier New", monospace;
-  --bs-gradient: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.15),
-    rgba(255, 255, 255, 0)
-  );
-  --bs-body-font-family: var(--bs-font-sans-serif);
-  --bs-body-font-size: 1rem;
-  --bs-body-font-weight: 400;
-  --bs-body-line-height: 1.6;
-  --bs-body-color: #fff;
-  --bs-body-bg: #2d2c38;
-  --bs-border-width: 1px;
-  --bs-border-style: solid;
-  --bs-border-color: #dee2e6;
-  --bs-border-color-translucent: rgba(0, 0, 0, 0.175);
-  --bs-border-radius: 1rem;
-  --bs-border-radius-sm: 1rem;
-  --bs-border-radius-lg: 1rem;
-  --bs-border-radius-xl: 1rem;
-  --bs-border-radius-2xl: 2rem;
-  --bs-border-radius-pill: 50rem;
-  --bs-link-color: #3763f4;
-  --bs-link-hover-color: #2c4fc3;
-  --bs-code-color: #dc3dcb;
-  --bs-highlight-bg: #fff3cd;
-}
+
 *,
 *::before,
 *::after {
@@ -10624,7 +10546,7 @@ img::-moz-selection {
   object-fit: none;
 }
 .navbar {
-  background-color: #2d2c38;
+  background-color: var(--bs-body-bg);
 }
 #mainNav {
   border-bottom: 1px solid rgba(45, 45, 45, 0.1);
@@ -10637,12 +10559,9 @@ img::-moz-selection {
   font-weight: 700 !important;
 }
 #mainNav.navbar-dark .navbar-nav > li.nav-item > a.nav-link {
-  color: rgba(255, 255, 255, 0.85);
+  color: var(--bs-body-color);
 }
-#mainNav.navbar-dark .navbar-nav > li.nav-item > a.nav-link:hover,
-#mainNav.navbar-dark .navbar-nav > li.nav-item > a.nav-link:focus {
-  color: #fff;
-}
+
 @media (min-width: 992px) {
   #mainNav .navbar-nav > li.nav-item > a.nav-link {
     padding: 0.5rem 1rem;

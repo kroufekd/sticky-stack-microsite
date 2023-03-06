@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>StickyStack</title>
     <link rel="icon" href="assets/img/px_logo.png" type="image/icon type">
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/bootstrap/css/dark.css" id="sheet-type">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="assets/bootstrap/css/styles.css">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Inter:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;display=swap">
@@ -20,12 +21,15 @@
 </head>
 
 <body>
+    <div class="theme-container shadow-dark-btn">
+        <img id="theme-icon" src="https://www.uplooder.net/img/image/55/7aa9993fc291bc170abea048589896cf/sun.svg"
+            alt="ERR">
+    </div>
     <nav class="navbar navbar-dark navbar-expand-md sticky-top py-3 shadow-dark" id="mainNav">
-        <div class="container"><a class="navbar-brand d-flex align-items-center" href="https://www.performax.cz"
-                target="_blank"><span><img class="nav-logo" src="https://cdn.performax.cz/px2-data/7/269c2d3.png"
-                        alt=""></span></a><button data-bs-toggle="collapse" class="navbar-toggler"
-                data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span
-                    class="navbar-toggler-icon"></span></button>
+        <div class="container"><a class="navbar-brand d-flex align-items-center" href="#" target="_blank"><span>
+                    <img class="nav-logo" src="assets/img/px_logo_dark.png" alt=""></span></a><button
+                data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span
+                    class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navcol-1">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item"><a class="nav-link active" href="index.html">StickyStack</a></li>
@@ -42,7 +46,9 @@
                     <div class="text-center">
                         <p class="fw-bold text-success mb-2">Maximalize your profits!</p>
                         <h1 class="fw-bold header-text">The future is in</h1>
-                        <h1 class="fw-bold header-text end-word"><p class="line-1 anim-typewriter">StickyStack.</p></h1>
+                        <h1 class="fw-bold header-text end-word">
+                            <p class="line-1 anim-typewriter">StickyStack.</p>
+                        </h1>
                     </div>
                 </div>
             </div>
@@ -253,7 +259,8 @@
                 </div>
                 <div class="col mb-4">
                     <div class="d-flex flex-column align-items-center align-items-sm-start p-3 about-third">
-                        <p class="bg-dark border rounded border-dark p-4 h3-text shadow-dark reveal">You don’t have to make any
+                        <p class="bg-dark border rounded border-dark p-4 h3-text shadow-dark reveal">You don’t have to
+                            make any
                             changes. We simply add the top
                             SSPs to your present ad stack and you can start monetizing through the
                             most modern programmatic tools within just two easy steps. We will
@@ -275,10 +282,10 @@
                 </div>
             </div>
             <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 d-sm-flex justify-content-sm-center reveal">
-                <div class="col mb-4 border-right whyus-first">
+                <div class="col-lg-4 mb-4 border-right whyus-first">
                     <div class="d-flex flex-column align-items-center align-items-sm-start">
                         <h3 class="">A complete package <span
-                                class="h3-icon bg-dark border rounded border-dark p-3"><img
+                                class="h3-icon bg-dark border rounded border-dark p-3 whyus-icon"><img
                                     src="https://www.performax.cz/_nuxt/img/briefcase.e727ace.svg"></span></h3>
                         <p class="pt-4">
                             We implement all systems, technologies and data for you and put them under one roof. This
@@ -286,10 +293,10 @@
                         </p>
                     </div>
                 </div>
-                <div class="col mb-4 border-right whyus-second">
+                <div class="col-lg-4 mb-4 border-right whyus-second">
                     <div class="d-flex flex-column align-items-center align-items-sm-start ">
                         <h3 class="">Our own technology <span
-                                class="h3-icon bg-dark border rounded border-dark p-3"><img
+                                class="h3-icon bg-dark border rounded border-dark p-3 whyus-icon"><img
                                     src="https://www.performax.cz/_nuxt/img/physics.459f471.svg"></span></h3>
                         <p class="pt-4">
                             We know the media industry from all sides. We not only flawlessly manage the distribution of
@@ -297,10 +304,10 @@
                         </p>
                     </div>
                 </div>
-                <div class="col mb-4 ">
+                <div class="col-lg-4 mb-4 whyus-third">
                     <div class="d-flex flex-column align-items-center align-items-sm-start">
                         <h3 class="">Fast data reporting <span
-                                class="h3-icon bg-dark border rounded border-dark p-3"><img
+                                class="h3-icon bg-dark border rounded border-dark p-3 whyus-icon"><img
                                     src="	https://www.performax.cz/_nuxt/img/list.2b81874.svg"></span></h3>
                         <p class="pt-4">
                             With our sophisticated and always up-to-date reports, you'll know immediately how your ads
@@ -318,7 +325,7 @@
     <section class="py-5">
         <div class="container py-5">
             <div class="row mb-5">
-                <div class="col-md-8 col-xl-6 text-center mx-auto">                    
+                <div class="col-md-8 col-xl-6 text-center mx-auto">
                     <h2 class="fw-bold">Impressed?</h2>
                     <p class="fw-bold text-success mb-2">Fill out the following form.</p>
                 </div>
@@ -390,23 +397,6 @@
 
         </div>
     </section>
-    <!-- <section class="py-5">
-        <div class="container">
-            <div
-                class="bg-dark border rounded border-dark d-flex flex-column justify-content-between align-items-center flex-lg-row p-4 p-lg-5">
-                <div class="text-center text-lg-start py-3 py-lg-1">
-                    <h2 class="fw-bold mb-2">Subscribe to our newsletter</h2>
-                    <p class="mb-0">Imperdiet consectetur dolor.</p>
-                </div>
-                <form class="d-flex justify-content-center flex-wrap flex-lg-nowrap" method="post">
-                    <div class="my-2"><input class="border rounded-pill shadow-sm form-control" type="email"
-                            name="email" placeholder="Your Email"></div>
-                    <div class="my-2"><button class="btn btn-primary shadow ms-2" type="submit">Subscribe </button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </section> -->
     <footer class="bg-dark">
         <div class="container py-4 py-lg-5">
             <div class="row justify-content-center">
