@@ -1,4 +1,5 @@
 :root {
+  --bs-theme-color: #000;
     --bs-blue: #3763f4;
     --bs-indigo: #6610f2;
     --bs-purple: #6f42c1;
@@ -30,7 +31,7 @@
     --bs-danger: #dc3545;
     --bs-light: #f5f6f8;
     --bs-dark: #27262e;
-    --bs-primary-rgb: 55, 99, 244;
+    --bs-primary-rgb: 240, 50, 51;
     --bs-secondary-rgb: 220, 61, 203;
     --bs-success-rgb: 25, 245, 170;
     --bs-info-rgb: 6, 160, 178;

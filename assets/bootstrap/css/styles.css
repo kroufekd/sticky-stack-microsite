@@ -154,7 +154,7 @@ h3 {
 #calculator_country {
   background-color: var(--bs-body-bg);
   border-color: #111;
-  color: white;
+  color: var(--bs-theme-color);
 }
 .calcHeader {
   display: flex;
@@ -166,6 +166,9 @@ h3 {
 }
 
 #calc {
+  scroll-margin-top: 16vh;
+}
+#contact{
   scroll-margin-top: 8vh;
 }
 
@@ -288,8 +291,6 @@ form:valid #debt-amount-slider input:checked + label::before {
   }
 }
 
-
-
 @media only screen and (max-width: 1200px) {
   .whyus-first{
     border: 0 !important;
@@ -303,7 +304,11 @@ form:valid #debt-amount-slider input:checked + label::before {
     width: 100%;
   }
 }
-
+@media only screen and (max-width: 765px) {
+  .language-switch{
+    margin-left: 0 !important;
+  }
+}
 
 @media only screen and (max-width: 600px) {
   .graph-text-content{
@@ -461,4 +466,16 @@ form:valid #debt-amount-slider input:checked + label::before {
   animation-name: change;
   animation-duration: 1s;
   animation-direction: alternate;
+}
+
+.footer-hr{
+  border: 2px solid grey
+}
+
+.language-switch{
+  margin-left: 6vw;
+}
+
+.form-check-input-reverse{
+  float: right;
 }
