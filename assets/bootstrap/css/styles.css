@@ -26,7 +26,7 @@ body {
   font-size: 4rem;
 }
 
-.end-word{
+.end-word {
   background-image: linear-gradient(
     180deg,
     transparent 75%,
@@ -35,11 +35,9 @@ body {
   background-position: 0 100%; /*OR bottom left*/
   background-size: 0% 30px;
   background-repeat: no-repeat;
-  transition:
-    background-size 0.3s,
-    background-position 0s 0.3s; /*change after the size immediately*/
+  transition: background-size 0.3s, background-position 0s 0.3s; /*change after the size immediately*/
 }
-.underline{
+.underline {
   background-position: 100% 100%; /*OR bottom right*/
   background-size: 100% 100px;
 }
@@ -60,7 +58,8 @@ body {
 }
 
 .anim-typewriter {
-  animation: typewriter 1.5s steps(12) 1s 1 normal both, blinkTextCursor 4s steps(12) normal;
+  animation: typewriter 1.5s steps(12) 1s 1 normal both,
+    blinkTextCursor 4s steps(12) normal;
 }
 @keyframes typewriter {
   from {
@@ -74,7 +73,7 @@ body {
   10% {
     border-right-color: rgba(255, 255, 255, 0.75);
   }
-  20%{
+  20% {
     border-right-color: transparent;
   }
   30% {
@@ -138,12 +137,17 @@ h3 {
 .calcResultWrap {
   display: flex;
   width: 100%;
-  height: 100%;
+  height: 25vh;
   background: var(--bs-primary);
   border-radius: 4px;
   justify-content: center;
   align-items: center;
 }
+.calcText {
+  border-radius: 10px;
+  border: 1px var(--bs-primary) solid;
+}
+
 .calcResultText {
   color: #333;
   font-size: 4em;
@@ -168,7 +172,7 @@ h3 {
 #calc {
   scroll-margin-top: 16vh;
 }
-#contact{
+#contact {
   scroll-margin-top: 8vh;
 }
 
@@ -292,35 +296,35 @@ form:valid #debt-amount-slider input:checked + label::before {
 }
 
 @media only screen and (max-width: 1200px) {
-  .whyus-first{
+  .whyus-first {
     border: 0 !important;
     width: 100%;
   }
-  .whyus-second{
+  .whyus-second {
     border: 0 !important;
     width: 100%;
   }
-  .whyus-third{
+  .whyus-third {
     width: 100%;
   }
 }
 @media only screen and (max-width: 765px) {
-  .language-switch{
+  .language-switch {
     margin-left: 0 !important;
   }
 }
 
 @media only screen and (max-width: 600px) {
-  .graph-text-content{
+  .graph-text-content {
     margin-top: 5vh;
   }
-  .whyus-first{
+  .whyus-first {
     border: 0 !important;
   }
-  .whyus-second{
+  .whyus-second {
     border: 0 !important;
   }
-  .header-text{
+  .header-text {
     font-size: 3rem;
   }
 }
@@ -421,8 +425,7 @@ form:valid #debt-amount-slider input:checked + label::before {
   opacity: 1;
 }
 
-
-:root{
+:root {
   --bs-dark: #212529;
 }
 
@@ -449,7 +452,9 @@ form:valid #debt-amount-slider input:checked + label::before {
 }
 
 .shadow-light {
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  background-color: #fff;
 }
 
 @keyframes change {
@@ -468,14 +473,146 @@ form:valid #debt-amount-slider input:checked + label::before {
   animation-direction: alternate;
 }
 
-.footer-hr{
-  border: 2px solid grey
+.footer-hr {
+  border: 2px solid grey;
 }
 
-.language-switch{
-  margin-left: 6vw;
+.language-switch {
 }
 
-.form-check-input-reverse{
+.form-check-input-reverse {
   float: right;
+}
+
+.long-label {
+  width: 90%;
+}
+
+.clickable {
+  cursor: pointer;
+  border-radius: 3%;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: fit-content;
+}
+
+.clickable:hover {
+  border: 1px solid var(--bs-border);
+  /* box-shadow: rgba(var(--bs-primary-rgb), 0.4) -5px 5px, rgba(var(--bs-primary-rgb), 0.3) -10px 10px, rgba(var(--bs-primary-rgb), 0.2) -15px 15px, rgba(var(--bs-primary-rgb), 0.1) -20px 20px, rgba(var(--bs-primary-rgb), 0.05) -25px 25px; */
+  box-shadow: rgba(var(--bs-box-shadow), 0.15) 0px 48px 100px 0px;
+}
+
+.iphone-x {
+  position: relative;
+  margin: 40px auto;
+  width: 360px;
+  height: 780px;
+  background-color: #f1f1f1;
+  border-radius: 40px;
+  box-shadow: 0px 0px 0px 11px #1f1f1f, 0px 0px 0px 13px #191919, 0px 0px 0px 10px #111;
+}
+.iphone-x:before, .iphone-x:after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+/* .iphone-x:after {
+  bottom: 7px;
+  width: 140px;
+  height: 4px;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+} */
+.iphone-x:before {
+  top: 0px;
+  width: 56%;
+  height: 30px;
+  background-color: #1f1f1f;
+  border-radius: 0px 0px 40px 40px;
+}
+.iphone-x i, .iphone-x b, .iphone-x s, .iphone-x span, .iphone-x div {
+  position: absolute;
+  display: block;
+  color: transparent;
+}
+.iphone-x i {
+  top: 0px;
+  left: 50%;
+  transform: translate(-50%, 6px);
+  height: 8px;
+  width: 15%;
+  background-color: #101010;
+  border-radius: 8px;
+  box-shadow: inset 0px -3px 3px 0px rgba(256, 256, 256, 0.2);
+}
+.iphone-x b {
+  left: 10%;
+  top: 0px;
+  transform: translate(180px, 4px);
+  width: 12px;
+  height: 12px;
+  background-color: #101010;
+  border-radius: 12px;
+  box-shadow: inset 0px -3px 2px 0px rgba(256, 256, 256, 0.2);
+}
+.iphone-x b:after {
+  content: '';
+  position: absolute;
+  background-color: #2d4d76;
+  width: 6px;
+  height: 6px;
+  top: 2px;
+  left: 2px;
+  top: 3px;
+  left: 3px;
+  display: block;
+  border-radius: 4px;
+  box-shadow: inset 0px -2px 2px rgba(0, 0, 0, 0.5);
+}
+.iphone-x s {
+  top: 50px;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+  font-size: 70px;
+  font-weight: 100;
+  padding-top: 60px;
+}
+.iphone-x span {
+  bottom: 50px;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  left: 30px;
+}
+.iphone-x span + span {
+  left: auto;
+  right: 30px;
+}
+
+.mockup-container{
+  top: 55px;
+  background-color: grey;
+  width: 200px;
+  height: 100px;
+  left: 22px;
+}
+
+.mockup-text{
+  top: 175px;
+  width: 318px;
+  height: 20px;
+  background: #b48080;
+  left: 22px;
+}
+
+.mockup-content{
+  position: absolute;
+  top: 4px;
 }

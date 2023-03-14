@@ -1,4 +1,6 @@
 :root {
+  --bs-box-shadow: 17, 12, 46;
+  --bs-border: #e7e7e7;
   --bs-theme-color: #000;
     --bs-blue: #3763f4;
     --bs-indigo: #6610f2;

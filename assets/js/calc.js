@@ -17,13 +17,18 @@ function rangeSlideMobile(value, char) {
   recalculate();
 }
 
-function countRevenue(mobileRatio, monthyPageviews, adFrequency, location) {
-  const CASH_PER_IMP = 0.00045;
-  console.log(adFrequency);
-  var revenue =
-    monthyPageviews * CASH_PER_IMP * adFrequency * location * mobileRatio;
+function rangeSlideECPM(value, char) {
+  value = value / 20;
+  
+  document.getElementById("ecpmSliderValue").innerHTML = value;
+  recalculate();
+}
+
+function countRevenue(mobileRatio, monthyPageviews, adFrequency, location, ecpm) {
+  var revenue = monthyPageviews * ecpm * adFrequency * location * mobileRatio;
   return revenue;
 }
+
 getAsIntensityFromSlider();
 function getAsIntensityFromSlider() {
   for (let i = 0; i < intensityCheckboxes.length; i++) {
@@ -61,15 +66,23 @@ function removeClickedAttr() {
 
 function recalculate() {
   var adIntensity = getAsIntensityFromSlider();
+  var calc_result = document.querySelector(".calcResult");
+
   var pageviews = document.querySelector("#pageViewsSliderValue").innerHTML;
   pageviews = pageviews.replace(/,/g, "");
   pageviews = parseInt(pageviews);
+  
   var mobileRatio = document.querySelector("#mobileSliderValue").innerHTML;
   mobileRatio.slice(0, -1);
   mobileRatio = parseInt(mobileRatio);
   mobileRatio = mobileRatio / 100 + 0.1;
-  var calc_result = document.querySelector(".calcResult");
-  var revenue = countRevenue(mobileRatio, pageviews, adIntensity, 1);
+  
+  var ecpm = document.querySelector("#ecpmSliderValue").innerHTML;
+  // ecpm = ecpm.replace(/,/g, "");
+  ecpm = parseFloat(ecpm)
+  ecpm = ecpm / 10000;
+
+  var revenue = countRevenue(mobileRatio, pageviews, adIntensity, 1, ecpm);
   revenue = Math.round(revenue);
   revenue.toString();
   revenue = revenue.toLocaleString("en");
